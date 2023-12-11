@@ -95,6 +95,7 @@ End of optimization.
 ![](./images/HuffmanTree.png)
 
 7. Counter Example:
+
 | Task i | s(i) | f(i) |
 |--------|------|------|
 |1|1|7|

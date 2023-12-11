@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include "Queue.h"
 
 void sequence(Queue*);
