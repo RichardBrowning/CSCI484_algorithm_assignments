@@ -9,9 +9,10 @@ class Matrix {
         this->rows = rows;
         this->cols = cols;
     }
-    Matrix(Matrix *matrix) {
-        this->rows = matrix->rows;
-        this->cols = matrix->cols;
+    // Copy constructor
+    Matrix(const Matrix& other) {
+        this->rows = other.rows;
+        this->cols = other.cols;
     }
     friend std::ostream& operator<<(std::ostream& os, const Matrix& matrix) {
         os << "(" << matrix.rows << ", " << matrix.cols << ")";

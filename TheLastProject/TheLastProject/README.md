@@ -92,6 +92,7 @@ Right side represents the stack top
 |-|
 
 |stack B | 7 |
+|-|-|
 
 10. Step 10
 
@@ -105,29 +106,21 @@ Here is a sample output:
 ![output](./images/1.png)
 
 ## Problem 2
-As cost of a push or a pop cost 1 unit of work. 
-- push into queue: 
-    - push x onto stack A: 1 unit
 
-**In total: 1 unit**
-
-> $n$ represents the number of elements in the stack A
-> the number of elements in stack B is irrelevant
-
-- pop from queue:
-    - if B is not empty:
-        - pop from stack B: 1 unit
-
-    - if B is empty:
-        - pop from stack A (n units), push to stack B (n units), until stack A is empty: 2n units
-        - pop from stack B: 1 unit
-
-**In total: 1 unit if B is not empty, 2n + 1 units if B is not empty**
-
-1. In case that all enqueue operations are grouped together, the total cost is $n$ units
-and all the dequeue operations are grouped together, the first dequeue operation costs $n$ units, and the rest of dequeue operations cost 1 unit each, taking place n - 1 times. So the total cost is $2n - 1$ units.
-This is a total of $3n - 1$ units of work.
-
-2. In case that enqueue and dequeue operations are interleaved. Each enqueue operation costs 1 unit, and each dequeue operation costs 1 unit if B is not empty, and $2n + 1$ units if B is empty. Given that B is always empty (always emptied after each dequeue operation), and that n would be equal to 1. So the dequeuing cost of each operation is $3$ units. So each enqueue-dequeue pair costs $4$ units. So the total cost is $4n$ units. This is possibly the worst case. 
+In case that all enqueue operations are grouped together,
+The dequeue operation costs $2n + 1$ units with $n$ cost on popping A, and $n$ cost pushing into B, finished with B getting popped once, So the total cost is $2n + 1$ units.
 
 ## Problem 3
+explain how a simplistic worst-case analysis would lead to the conclusion that after n operations, O(n^2) units of work would have been done
+
+In a simplistic worst case, in the worst case scenario, a step would cost $2n+1$ or $2n-1$ (needs to be transfered from A to B to be dequeued). So the total cost is $n(2n+1)$ units. This result in a total of O(n^2).
+## Problem 4
+Using the accounting method, assign the lowest (integer) amortized cost possible to the enqueue operation and to the dequeue operation so that after any sequence of n1 enqueues and n2
+dequeues, n1 >= n2, the amortized cost is >= the actual cost. Explain why this works
+
+One possibility is enqueue = 3 and dequeue = 1.
+
+Given that enqueuing x on stack A cost 1, giving a credit of 2 with item x. If x has to be transferred from A to B, it will cost 2 units, leaving 0 credit for x. Popping x from B costs 1. But i amortized cost to dequeue pays the 1 cost to pop from B.
+
+## Problem 5
+If amortized cost of each operation is constant, it will be $nO(1) = O(n)$ in total for n operations.

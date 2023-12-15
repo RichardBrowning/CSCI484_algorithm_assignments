@@ -1,0 +1,3 @@
+﻿  MatrixChain.h
+C:\Users\mi888\Documents\visual_studio_projects\q3\q3\MatrixChain.h(65,116): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  q3.vcxproj -> C:\Users\mi888\Documents\visual_studio_projects\q3\x64\Debug\q3.exe

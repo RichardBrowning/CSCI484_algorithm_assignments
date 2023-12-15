@@ -1,19 +1,15 @@
 #include <iostream>
-#include "Matrix.h"
-#include "MatrixChain.h"
-
-#include <iostream>
 #include <vector>
 #include "Matrix.h"
 #include "MatrixChain.h"
 
 int main() {
     // Example usage
-    std::vector<Matrix*> *matrices = new std::vector<Matrix*>{
-        new Matrix(30, 1),
-        new Matrix(1, 40),
-        new Matrix(40, 10),
-        new Matrix(10, 25)
+    std::vector<Matrix> *matrices = new std::vector<Matrix>{
+        Matrix(30, 1),
+        Matrix(1, 40),
+        Matrix(40, 10),
+        Matrix(10, 25)
     };
     
     int size = matrices->size();
@@ -23,12 +19,9 @@ int main() {
     matrixChain.solve();
     matrixChain.print_matrixMulCount();
     // Destruct matrixChain
-    matrixChain.~MatrixChain();
+    //matrixChain.~MatrixChain();
     
     // Delete matrices
-    for (int i = 0; i < matrices->size(); i++){
-        delete matrices->at(i);
-    }
     delete matrices;
     
     return 0;
