@@ -1,0 +1,5 @@
+﻿  LIS.cpp
+C:\Users\mi888\source\repos\dynamic_programming_5\dynamic_programming_5\LIS.cpp(18,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\mi888\source\repos\dynamic_programming_5\dynamic_programming_5\LIS.cpp(34,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\mi888\source\repos\dynamic_programming_5\dynamic_programming_5\LIS.cpp(42,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  dynamic_programming_5.vcxproj -> C:\Users\mi888\source\repos\dynamic_programming_5\x64\Debug\dynamic_programming_5.exe

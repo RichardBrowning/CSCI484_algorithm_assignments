@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\mi888\source\repos\dynamic_programming_2\dynamic_programming_2\MatrixChain.hpp(66,113): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\mi888\source\repos\dynamic_programming_2\dynamic_programming_2\main.cpp(15,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  dynamic_programming_2.vcxproj -> C:\Users\mi888\source\repos\dynamic_programming_2\x64\Debug\dynamic_programming_2.exe
